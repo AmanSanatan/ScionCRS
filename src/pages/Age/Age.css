@@ -1,0 +1,12 @@
+.age-buttons-container {
+    display: flex; 
+    flex-direction: column;
+}
+.age-buttons-title {
+    font-weight: 600;
+}
+.age-button {
+    margin: 1% ;
+    font-size: 0.75rem;
+    width: 110px ;
+}

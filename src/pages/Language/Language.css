@@ -1,0 +1,17 @@
+
+.language-container {
+    display: flex ;
+    flex-direction: column; 
+}
+.language-inputs{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+.language-input-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.language-input {
+    padding: 5%;
+}

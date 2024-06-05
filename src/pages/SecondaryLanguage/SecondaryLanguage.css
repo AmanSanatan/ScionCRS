@@ -1,0 +1,12 @@
+.sl-buttons-container {
+    display: flex; 
+    flex-direction: column;
+}
+.sl-buttons-title {
+    font-weight: 600;
+}
+.sl-button {
+    margin: 1% ;
+    font-size: 0.75rem;
+    width: 110px ;
+}

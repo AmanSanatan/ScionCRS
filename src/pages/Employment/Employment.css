@@ -1,0 +1,12 @@
+.employment-buttons-container {
+    display: flex; 
+    flex-direction: column;
+}
+.employment-buttons-title {
+    font-weight: 600;
+}
+.employment-button {
+    margin: 1% ;
+    font-size: 0.75rem;
+    width: 110px ;
+}

@@ -1,35 +1,65 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import React from 'react';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import Language from './pages/Language/Language.jsx';
+import Age from './pages/Age/Age.jsx' ;
+import WorkExperience from './pages/WorkExperience/WorkExperience.jsx';
+import Education from './pages/Education/Education.jsx';
+import Employment from './pages/Employment/Employment.jsx';
+import SecondaryLanguage from './pages/SecondaryLanguage/SecondaryLanguage.jsx';
+import Adaptability from './pages/Adaptability/Adaptability.jsx';
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [score, setScore] = useState(0);
+  const [step, setStep] = useState(1);
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="crs-form-container">
+      <div className='crs-form'>
+        <div className='crs-form-step-display'>
+          <div className='crs-form-step'>Step {step} out 8</div>
+          <div className='crs-form-step-box'>
+            <div className='box' style={step == 1 ? { backgroundColor: 'black' } : {}} />
+            <div className='box' style={step == 2 ? { backgroundColor: 'black' } : {}} />
+            <div className='box' style={step == 3 ? { backgroundColor: 'black' } : {}} />
+            <div className='box' style={step == 4 ? { backgroundColor: 'black' } : {}} />
+            <div className='box' style={step == 5 ? { backgroundColor: 'black' } : {}} />
+            <div className='box' style={step == 6 ? { backgroundColor: 'black' } : {}} />
+            <div className='box' style={step == 7 ? { backgroundColor: 'black' } : {}} />
+            <div className='box' style={step == 8 ? { backgroundColor: 'black' } : {}} />
+          </div>
+        </div>
+        <div className='crs-form-inputs'>
+          <Age score={score} setScore={setScore} step={step} setStep={setStep} />
+          <Language score={score} setScore={setScore} step={step} setStep={setStep}/>
+          <Education score={score} setScore={setScore} step={step} setStep={setStep}/>
+          <Employment score={score} setScore={setScore} step={step} setStep={setStep} />
+          <SecondaryLanguage score={score} setScore={setScore} step={step} setStep={setStep} /> 
+          <Adaptability score={score} setScore={setScore} step={step} setStep={setStep} />
+          <WorkExperience score={score} setScore={setScore} step={step} setStep={setStep}/>
+        </div>
+
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className='crs-score-display'>
+        <div className='crs-score-banner'>
+          <img className='crs-score-banner-img' src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/383px-Flag_of_Canada_%28Pantone%29.svg.png" />
+        </div>
+        <div className='crs-score-section'>
+          <div className='crs-score-title'>Your score</div>
+          <div className='crs-score'>{score}</div>
+        </div>
+        <div className='crs-score-banner-contact'>
+          <ConnectWithoutContactIcon />
+          <div className='crs-score-banner-contact-text'>Talk to an Expert<br />Call 9572835044</div>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
+
+
+
+
+
+
 
 export default App
